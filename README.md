@@ -215,20 +215,8 @@ results = ng.start(matrix)
 print(results["consensus"])
 ```
 
-## Current Caveats (Re-checked on February 24, 2026)
-
-- `patients/patientData.py` expects several CSV files that are not currently present in this repository:
-  - `patients/BRUMEG_functional/BRUMEG_AAL2_functional.csv`
-  - `patients/BRUMEG_functional/BRUMEG_AAL2_functional_data.csv`
-  - `patients/BRUMEG_functional/convergenceBRUMEG_AAL2_functional.csv`
-  - `patients/HCP/HCP_NetMats2_v4.csv`
-  - `patients/HCP/behavioralInformation.csv`
-  - `patients/HCP/convergenceHCP_abs_50.csv`
-  - `patients/HCP/convergenceHCP_1sim_preferred_action.csv`
-- `SyntheticNN/*.py` scripts reference `networkInfo` and `convergenceInfo`, which are not defined in-repo.
-- Unit tests currently report one stochastic failure and one import error due missing data:
-  - command: `python -m unittest discover -s tests -p '*Test.py'`
-  - result observed: 16 tests, 14 pass, 1 fail, 1 error.
+## Current Caveats
+This version works on data which was present in the clusters at the AIMS laboratory. So many of the proposed games do not work with real-life data due to the data not being found. Please change the directories of data accordingly to work on real-life adjacency matrices.
 
 ## Why This Port Exists
 
